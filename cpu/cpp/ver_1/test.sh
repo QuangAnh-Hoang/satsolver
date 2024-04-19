@@ -1,7 +1,7 @@
 #!/bin/bash
 
-for var in {1..400}
+for filename in ../../../benchmark/*.cnf
 do
-	echo "benchmark$var" | tee -a output.log
-	./obj/main ../../../benchmark/benchmark$var.cnf | tee -a output.log
+	echo "$filename" | tee -a output.log
+	./obj/main $filename | tee -a output.log
 done

@@ -520,6 +520,10 @@ int Solver::solve() {
 		double processFinal = timeCheckerCPU();
 		double processTimeFinal = processFinal - processStart;
 		printf( "Elapsed Time (CPU): %.2f\n", processTimeFinal );
+        printf( "Conflicts: %d\n", conflicts );
+		printf( "Decisions: %d\n", decides );
+		printf( "Propagations: %d\n", propagations );
+		printf( "Evaluations: %d\n", propagations + decides );
 	}
 
 	return res;
